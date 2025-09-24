@@ -6,7 +6,7 @@
 
 #include <mbot_lib/utils.h>
 
-
+//Converts the distance and angle into x and y cartisean coords.
 std::vector<float> rayConversionCartisean(float dist, float angle) 
 {
     // *** Task: Implement this function according to the header file *** //
@@ -15,32 +15,70 @@ std::vector<float> rayConversionCartisean(float dist, float angle)
 
     // *** End student code *** //
 }
-
+//Converts angle to object into vector to object.
 std::vector<float> rayConversionVector(float angle) 
 {
     // *** Task: Implement this function according to the header file *** //
 
-    return std::vector<float>();
+    float vx = 0.5 * std::cos(angle);
+    float vy = 0.5 * std::sin(angle);
+
+    return std::vector<float>{vx, vy};
+
 
     // *** End student code *** //
 }
-
+//Finds the index of the minimum distance in the given vector of Lidar ranges.
 int findMinDist(const std::vector<float>& ranges)
-{
-    // *** Task: Implement this function according to the header file *** //
+{   float lowestvalue = ranges[0];
+    float currentvalue = ranges[0];
+    int lowestvalueindex = 0;
+    for (int i = 0; i < ranges.size; i++){ //finding the number of the lowest value through the entire vector
+        currentvalue = ranges[i];
+        if (currentvalue < lowestvalue){
+
+            lowestvalue = currentvalue;
+        }
+    }
+    
+    for (int i = 0; i < ranges.size; i++){ //finding the index value
+        currentvalue = ranges[i];
+        if(currentvalue == lowestvalueindex){
+
+        return i;
+        }
+    }
 
     return -1;
 
-    // *** End student code *** //
-}
 
+    }
+
+
+//Finds the index of the minimum distance in the given vector of Lidar ranges,
+//skipping values of zero, which indicate bad readings.
 int findMinNonzeroDist(const std::vector<float>& ranges)
 {
-    // *** Task: Implement this function according to the header file *** //
+    float lowestvalue = ranges[0];
+    float currentvalue = ranges[0];
+    int lowestvalueindex = 0;
+    for (int i = 0; i < ranges.size(); i++){ //finding the number of the lowest value through the entire vector
+        currentvalue = ranges[i];
+        if (currentvalue < lowestvalue){
+            if (currentvalue != 0){//adding one more conditional. If the value is zero (bad read) dont update the function
+            lowestvalue = currentvalue;}
+        }
+    }
+    
+    for (int i = 0; i < ranges.size(); i++){ //finding the index value
+        currentvalue = ranges[i];
+        if(currentvalue == lowestvalueindex){
+
+        return i;
+        }
+    }
 
     return -1;
-    
-    // *** End student code *** //
 }
 
 std::vector<float> vectorAdd(const std::vector<float>& v1, const std::vector<float>& v2) 

@@ -52,6 +52,8 @@ int main(int argc, const char *argv[])
         float dist_to_wall = ranges[min_idx];
         float angle_to_wall = thetas[min_idx];
 
+        //from here, get the X and y drive values
+
         // *** Task 2: Implement the 2D Follow Me controller ***
         // Hint: Look at your code from follow_1D
         // Hint: When you compute the velocity command, you might find the functions

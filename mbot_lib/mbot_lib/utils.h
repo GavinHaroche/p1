@@ -150,7 +150,7 @@ int findMinNonzeroDist(const std::vector<float>& ranges);
 std::vector<float> vectorAdd(const std::vector<float>& v1, const std::vector<float>& v2);
 
 /**
- * Performs a cross product between two 3D vectors.
+ //* Performs a cross product between two 3D vectors.
  * @param  v1 First vector.
  * @param  v2 Second vector.
  * @return  Cross product between v1 and v2.

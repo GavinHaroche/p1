@@ -10,7 +10,7 @@
 std::vector<float> computeWallFollowerCommand(const std::vector<float>& ranges, const std::vector<float>& thetas)
 {
     // *** Task: Implement this function according to the header file *** //
-    
+    //Computes a drive command that will make the robot drive towards a goal pose.
     return std::vector<float>();
 
     // *** End student code *** //

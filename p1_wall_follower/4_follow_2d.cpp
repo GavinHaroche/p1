@@ -36,10 +36,10 @@ int main(int argc, const char *argv[])
     // We will store the Lidar scan data in these vectors.
     std::vector<float> ranges;
     std::vector<float> thetas;
-
+    std::vector<float> drivedirection = {0, 0};
     // *** Task 1: Adjust these values appropriately ***
 
-    float setpoint = 1;  // The goal distance from the wall in meters
+    float setpoint = 0.3;  // The goal distance from the wall in meters
 
     // *** End student code *** //
 
@@ -48,10 +48,32 @@ int main(int argc, const char *argv[])
         robot.readLidarScan(ranges, thetas);
 
         // Get the distance to the wall.
-        float min_idx = findMinNonzeroDist(ranges);
+        int min_idx = findMinNonzeroDist(ranges);
         float dist_to_wall = ranges[min_idx];
         float angle_to_wall = thetas[min_idx];
+        std::cout << "Thetas: " << thetas[min_idx] << "\n";
+        //std::cout << "Ranges: " << ranges[min_idx] << "\n";
 
+        drivedirection = rayConversionVector((angle_to_wall));
+
+        //bang bang control
+        float tolerance = 0.1;
+        float error = setpoint - dist_to_wall;
+        if(error < tolerance){
+            robot.drive(drivedirection[0]/2, drivedirection[1]/2, 0);
+        }
+
+        else if(error > tolerance){
+            robot.drive(-drivedirection[0]/2, -drivedirection[1]/2, 0);
+        }
+
+        else{
+            robot.drive(0, 0, 0);
+        }
+
+        //robot.drive(drivedirection[0], drivedirection[1], 0);
+
+        
         //from here, get the X and y drive values
 
         // *** Task 2: Implement the 2D Follow Me controller ***

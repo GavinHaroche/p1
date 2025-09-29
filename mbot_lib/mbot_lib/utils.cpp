@@ -20,8 +20,8 @@ std::vector<float> rayConversionVector(float angle)
 {
     // *** Task: Implement this function according to the header file *** //
 
-    float vx = 0.5 * std::cos(angle);
-    float vy = 0.5 * std::sin(angle);
+    float vx = 1 * std::cos(angle);
+    float vy = 1 * std::sin(angle);
 
     return std::vector<float>{vx, vy};
 
@@ -33,7 +33,7 @@ int findMinDist(const std::vector<float>& ranges)
 {   float lowestvalue = ranges[0];
     float currentvalue = ranges[0];
     int lowestvalueindex = 0;
-    for (int i = 0; i < ranges.size; i++){ //finding the number of the lowest value through the entire vector
+    for (int i = 0; i < ranges.size(); i++){ //finding the number of the lowest value through the entire vector
         currentvalue = ranges[i];
         if (currentvalue < lowestvalue){
 
@@ -41,7 +41,7 @@ int findMinDist(const std::vector<float>& ranges)
         }
     }
     
-    for (int i = 0; i < ranges.size; i++){ //finding the index value
+    for (int i = 0; i < ranges.size(); i++){ //finding the index value
         currentvalue = ranges[i];
         if(currentvalue == lowestvalueindex){
 
@@ -59,20 +59,19 @@ int findMinDist(const std::vector<float>& ranges)
 //skipping values of zero, which indicate bad readings.
 int findMinNonzeroDist(const std::vector<float>& ranges)
 {
-    float lowestvalue = ranges[0];
-    float currentvalue = ranges[0];
-    int lowestvalueindex = 0;
+    float lowestvalue = 99999;
+    float currentvalue;
     for (int i = 0; i < ranges.size(); i++){ //finding the number of the lowest value through the entire vector
         currentvalue = ranges[i];
+        if (currentvalue != 0){
         if (currentvalue < lowestvalue){
-            if (currentvalue != 0){//adding one more conditional. If the value is zero (bad read) dont update the function
             lowestvalue = currentvalue;}
         }
-    }
+    } 
     
     for (int i = 0; i < ranges.size(); i++){ //finding the index value
         currentvalue = ranges[i];
-        if(currentvalue == lowestvalueindex){
+        if(currentvalue == lowestvalue){
 
         return i;
         }
@@ -84,7 +83,7 @@ int findMinNonzeroDist(const std::vector<float>& ranges)
 std::vector<float> vectorAdd(const std::vector<float>& v1, const std::vector<float>& v2) 
 {
     // *** Task: Implement this function according to the header file *** //
-
+    //* Performs a cross product between two 3D vectors.
     return std::vector<float>();
 
     // *** End student code *** //
@@ -93,7 +92,8 @@ std::vector<float> vectorAdd(const std::vector<float>& v1, const std::vector<flo
 std::vector<float> crossProduct(const std::vector<float>& v1, const std::vector<float>& v2) 
 {
     // *** Task: Implement this function according to the header file *** //
-
+     //* Transforms a 2D vector into new coordinate frame that is rotated theta degrees 
+     //* counter clockwise from the coordinate frame in which it is currently represented.
     return std::vector<float>();
 
     // *** End student code *** //

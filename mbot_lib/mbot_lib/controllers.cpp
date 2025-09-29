@@ -13,12 +13,12 @@ float bangBangControl(float current, float setpoint, float scaling, float tolera
     float error = setpoint - current;
     //std::cout << current << "\n";
     if(error < tolerance){
-        std::cout << "driving to wall\n";
+        //std::cout << "driving to wall\n";
         return 0.2;
     }
 
     else if(error > tolerance){
-        std::cout << "driving away from wall\n";
+        //std::cout << "driving away from wall\n";
         return -0.2;
     }
 

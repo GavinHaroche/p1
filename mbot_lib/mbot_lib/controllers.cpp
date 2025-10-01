@@ -12,14 +12,20 @@ float bangBangControl(float current, float setpoint, float scaling, float tolera
     // *** Task: Implement this function according to the header file *** //
     float error = setpoint - current;
     //std::cout << current << "\n";
-    if(error < tolerance){
+
+    if(error == 0){
+
+        return 0;
+    }
+
+    else if(error < -tolerance){
         //std::cout << "driving to wall\n";
-        return 0.2;
+        return -1*scaling;
     }
 
     else if(error > tolerance){
         //std::cout << "driving away from wall\n";
-        return -0.2;
+        return scaling;
     }
 
     else{
@@ -32,9 +38,11 @@ float bangBangControl(float current, float setpoint, float scaling, float tolera
 
 float pControl(float current, float setpoint, float kp)
 {
-    // *** Task: Implement this function according to the header file *** //
 
-    return -0.1;
+    float error = setpoint-current;
+    float control = kp * error;
+    
+    return control;
 
     // *** End student code *** //
 }

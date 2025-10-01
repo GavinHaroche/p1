@@ -39,7 +39,7 @@ int main(int argc, const char *argv[])
     std::vector<float> drivedirection = {0, 0};
     // *** Task 1: Adjust these values appropriately ***
 
-    float setpoint = 0.3;  // The goal distance from the wall in meters
+    float setpoint = 0.6;  // The goal distance from the wall in meters
 
     // *** End student code *** //
 

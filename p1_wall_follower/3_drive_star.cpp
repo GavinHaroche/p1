@@ -33,20 +33,20 @@ int main(int argc, const char *argv[])
 
     // *** Task: Drive in a five pointed star *** //
     drivedirection = rayConversionVector((angles[0])*(M_PI/180));
-    robot.drive(drivedirection[0], drivedirection[1], 0);
-    sleepFor(2);
+    robot.drive(drivedirection[0]/2, drivedirection[1]/2, 0);
+    sleepFor(3);
     drivedirection = rayConversionVector((angles[1])*(M_PI/180));
-    robot.drive(drivedirection[0], drivedirection[1], 0);
-    sleepFor(2);
+    robot.drive(drivedirection[0]/2, drivedirection[1]/2, 0);
+    sleepFor(3);
     drivedirection = rayConversionVector((angles[2])*(M_PI/180));
-    robot.drive(drivedirection[0], drivedirection[1], 0);
-    sleepFor(2);
+    robot.drive(drivedirection[0]/2, drivedirection[1]/2, 0);
+    sleepFor(3);
     drivedirection = rayConversionVector((angles[3])*(M_PI/180));
-    robot.drive(drivedirection[0], drivedirection[1], 0);
-    sleepFor(2);
+    robot.drive(drivedirection[0]/2, drivedirection[1]/2, 0);
+    sleepFor(3);
     drivedirection = rayConversionVector((angles[4])*(M_PI/180));
-    robot.drive(drivedirection[0], drivedirection[1], 0);
-    sleepFor(2);
+    robot.drive(drivedirection[0]/2, drivedirection[1]/2, 0);
+    sleepFor(3);
     // *** End student code *** //
 
     // Stop the robot.

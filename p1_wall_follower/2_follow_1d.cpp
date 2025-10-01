@@ -39,7 +39,7 @@ int main(int argc, const char *argv[])
 
     // *** Task 1: Adjust these values appropriately ***
 
-    float setpoint = 0.2;  // The goal distance from the wall in meters
+    float setpoint = 0.3;  // The goal distance from the wall in meters
 
     // *** End student code *** //
 
@@ -52,7 +52,7 @@ int main(int argc, const char *argv[])
         if (dist_to_wall < 0) continue;
 
         // *** Task 2: Implement the Follow Me controller *** //
-        float robotspeed = bangBangControl(dist_to_wall, setpoint, 1, .05);
+        float robotspeed = bangBangControl(dist_to_wall, setpoint, -0.5, .05);
         std::cout << robotspeed << "\n";
         //std::cout << "distance to wall: " << dist_to_wall << "\n";
         robot.drive(robotspeed, 0, 0);

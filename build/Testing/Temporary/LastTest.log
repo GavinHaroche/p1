@@ -1,3 +1,30 @@
-Start testing: Sep 17 13:54 EDT
+Start testing: Oct 01 16:31 EDT
 ----------------------------------------------------------
-End testing: Sep 17 13:54 EDT
+19/26 Testing: CrossProduct.TestBasic
+19/26 Test: CrossProduct.TestBasic
+Command: "/home/mbot/Documents/p1_and_p2_template/build/test_public" "--gtest_filter=CrossProduct.TestBasic" "--gtest_also_run_disabled_tests"
+Directory: /home/mbot/Documents/p1_and_p2_template/build
+"CrossProduct.TestBasic" start time: Oct 01 16:31 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/mbot/Documents/p1_and_p2_template/googletest-1.15.2/googletest/src/gtest_main.cc
+Note: Google Test filter = CrossProduct.TestBasic
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CrossProduct
+[ RUN      ] CrossProduct.TestBasic
+[       OK ] CrossProduct.TestBasic (0 ms)
+[----------] 1 test from CrossProduct (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CrossProduct.TestBasic" end time: Oct 01 16:31 EDT
+"CrossProduct.TestBasic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 01 16:31 EDT

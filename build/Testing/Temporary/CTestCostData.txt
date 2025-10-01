@@ -1,1 +1,27 @@
+PControl.TestZero 10 0.000855877
+PControl.TestNegative 9 0.000987549
+PControl.TestPositive 9 0.000937489
+BangBangControl.TestZero 8 0.00120399
+BangBangControl.TestNearZero 6 0.00156268
+BangBangControl.TestPositive 9 0.000913574
+BangBangControl.TestNegative 9 0.000933465
+RayConversionCartisean.TestOne 8 0.00109508
+RayConversionCartisean.TestTwo 8 0.0010728
+RayConversionVector.TestPos 4 0.00212564
+RayConversionVector.TestNegative 4 0.00214514
+RayConversionVector.TestZero 5 0.00173588
+FindMinDist.TestBasic 4 0.0021051
+FindMinNonzeroDist.TestBasic 4 0.00243909
+FindMinNonzeroDist.TestIgnoreZero 5 0.00171033
+FindMinNonzeroDist.TestIgnoreFirstZero 5 0.0016979
+FindMinNonzeroDist.TestIgnoreFirstZeros 5 0.00168547
+VectorAdd.TestBasic 5 0.00166549
+CrossProduct.TestBasic 5 0.00167191
+SuperMario.TestNoEvents 0 0
+SuperMario.TestSequence1 0 0
+SuperMario.TestSequence2 0 0
+SuperMario.TestSequence3 0 0
+TransformVector2D.TestZeroTheta 3 0.00278267
+TransformVector2D.TestOne 0 0
+TransformVector2D.TestTwo 0 0
 ---

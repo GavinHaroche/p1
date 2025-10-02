@@ -1,10 +1,1 @@
-# Project 1 Wall Follower Checkpoint Videos
-- [Drive Square Demo](paste-link-to-a-video-here)
-- [Follow Me 1D Demo](paste-link-to-a-video-here)
-- [Drive Star Demo](paste-link-to-a-video-here)
-- [Follow Me 2D Demo](paste-link-to-a-video-here)
-- [Wall Follower Demo](paste-link-to-a-video-here)
-
-# Project 2 Wall Follower Checkpoint Videos
-- [Robot Hits the Spot Demo](paste-link-to-a-video-here)
-- [Bug Navigation Demo](paste-link-to-a-video-here)
+https://drive.google.com/drive/folders/1t9xqVcgFfsvieZbCgxoDe0usBlpV9w4d
